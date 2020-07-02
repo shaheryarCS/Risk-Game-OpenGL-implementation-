@@ -18,18 +18,6 @@ void Diffusion(float r,float g,float b)
 }
 
 
-//void shine(float r)
-//{
-	//GLfloat high_shininess[] = { r };
-     //glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
-
-//}
-
-//void SPECULAR(float r,float g,float b)
-//{
-	//GLfloat c[] = {r, g, b, 0.0};
-	//glMaterialfv(GL_FRONT, GL_SPECULAR, c);
-//}
 
 };
 material materials;
@@ -108,87 +96,7 @@ drawBitmapText(string,x,y,z);
 //--------------------------------------------------------end
 
 //--------------------------------------------------------start  19 nov 2019
- /*class LightAndMaterial {
-public:
 
-     // GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
-  // GLfloat mat_shininess[] = { 50.0 };
-float i=0;
-GLfloat light_position[4];// = { 0.0, 0.0, 1.0, 0.0 };//in x direction in positive . it means that light is on.
-   GLfloat lmodel_ambient[4];// = { 0.1, 0.1, 0.1, 1.0 };
-// automatic inline
-bool positionOn=true;
-
- void Light_Ani()
- {
-
-	if(i<1.0)
-	{
-		i=i+.1;
-	}
-	else
-	i=0;
-}*/
-/*
- void Light_position(float x,float y,float z,float Isdirection)
- {
-
-Light_Ani();
- 	if(!positionOn)
- 	{
- 		 	light_position[0] = 0;
- 	light_position[1] = 0;
- 	light_position[2] = 0;
- 	light_position[3] = 0;
-	 }
-	 else
-	 {
-	 	light_position[0] = x;
- 	light_position[1] = y;
- 	light_position[2] = z;
- 	light_position[3] = Isdirection;
-
-	 }
-glClearColor (0.0, 0.0, 0.0, 0.0);
-
-//   glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-  // glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-   glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-
-   glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
- }
-
-*/
-/* void material()
- {
- 	   GLfloat no_mat[] = { 0.0, 0.0, 0.0, 1.0 };
-   GLfloat mat_ambient[] = { 0.7, 0.7, 0.7, 1.0 };
-   GLfloat mat_ambient_color[] = { 0.8, 0.8, 0.2, 1.0 };
-   //GLfloat mat_diffuse[] = { 0.1, 0.5, 0.8, 1.0 };
-    GLfloat mat_diffuse[] = { 0, 0, 1, 0.0 };
-
-   GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
-   GLfloat no_shininess[] = { 0.0 };
-   GLfloat low_shininess[] = { 5.0 };
-   GLfloat high_shininess[] = { 100.0 };
-   //GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
-   GLfloat mat_emission[] = {0.0, .0, i, 0.0};
-   GLfloat mat_emission_fire[] = {i, i, 0.0, 0.0};
-
-
-   glTranslatef (0, 0.0, 2.0);
-     // glColor3f(1.0f, 1.0f, 1.0f);
-   glMaterialfv(GL_FRONT, GL_AMBIENT, no_mat);
-   glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
-   glMaterialfv(GL_FRONT, GL_SPECULAR, no_mat);
-   //glMaterialfv(GL_FRONT, GL_SHININESS, no_shininess);
-    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
-   glMaterialfv(GL_FRONT, GL_EMISSION, mat_emission_fire);
-   glutSolidSphere(1.5, 16, 16);
-
- }*/
-//};
-//LightAndMaterial Light1;
 
 //--------------------------------------------------------end    19 nov 2019
  #include <cmath>
@@ -549,52 +457,7 @@ class Cannon
 //	void tankBody(float si);
 
 };
-/*void Cannon:: move(float x,float y)
-{
-	float minX=0.0,maxX=3.0;
-	this->centerX=x,this->centerY=y;
- 	if(this->centerX<maxX&&moveBack==false  )
- 	{
- 		this->centerX +=speed;
 
-	 }
-	 else
-	 	moveBack=true;
-
-	if(this->centerX>minX&&moveBack==true  )
- 	{
- 		this->centerX -=speed;
-
-	 }
-	 else
-	 	moveBack=false;
-
-}*/
-/*void Cannon:: tankBody(float si)
-{
-	//this->s=si;
-	float width=.6,front=.2,back=.2;
-	glBegin(GL_POLYGON);                  // Each set of 4 vertices form a quad
-      glColor3f(1.0f, 0.0f, 0.0f);     // Red
-      glVertex2f(Tankx1=-si, Tanky1=-si);	//x1,y1
-      glVertex2f( Tankx2=si+width, -si);	//x2,y1
-      //front
-      glVertex2f( si+width+front, -si+front);	//x2,y1
-      glVertex2f(si+width+front, si-front);	//x2,y1
-      //end
-
-      glVertex2f( si+width, Tanky2=si);	//x2,y2
-      glVertex2f(-si, si);	//x1,y2
-
-
-	  //back
-
- 	   glVertex2f(-si-back, si-back);	//x1,y2
-      glVertex2f(Tankx1=-si-back, Tanky1=-si+back);	//x1,y1
-
-   glEnd();
-
-}*/
 void Cannon::make(float si)
 {
 	 glPushMatrix();
@@ -930,20 +793,6 @@ void collision::collisionWithLaser(float cX,float cY,float ballX,float ballY)
 		TB.IsCollision=false;
 }
 
-/*void collision::collisionWithVehicle(float carX,float carY,float ballX,float ballY)
-{
-	if(ballX>=carX && ballX<=carX+.5 || ballY>=carY && ballY<=carY+0.2 )
-	{
-		glBegin(GL_QUADS);                  // Each set of 4 vertices form a quad
-      glColor3f(1.0f, 0.0f, 0.0f);     // Red
-      glVertex2f(-.5f, -0.5f);
-      glVertex2f( 0.5f, -0.5f);
-      glVertex2f( 0.5f, 0.5f);
-      glVertex2f(-0.5f, 0.5f);
-   glEnd();
-stop=true;
-	}
-}*/
 collision collisionWithCar1;
 
 //----------------------------------------------------------start
