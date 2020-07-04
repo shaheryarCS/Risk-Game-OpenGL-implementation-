@@ -1,5 +1,6 @@
 # Risk-Game-OpenGL-implementation-
 The Risk game is developed on openGL using C++ language .
 
-![2](https://user-images.githubusercontent.com/42182191/86518298-1062f700-be4a-11ea-8458-3f0c0e2bef93.gif)
+![4](https://user-images.githubusercontent.com/42182191/86518352-cc242680-be4a-11ea-9c71-7c6f2dfb3a86.gif)
+
 
